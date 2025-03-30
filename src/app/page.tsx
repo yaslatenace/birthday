@@ -1,30 +1,27 @@
+// app/page.tsx (votre page d'accueil)
 import Link from "next/link";
-import type { NextPage } from 'next';
 
-const Home: NextPage = () => {
+export default function Home() {
   return (
-    <div className="relative h-screen w-full flex items-center justify-center text-center">
-      {/* Fond GIF */}
-      <div 
-        className="fixed inset-0 -z-10 bg-cover bg-center"
-        style={{ backgroundImage: "url('/background.gif')" }}
-      />
-      
-      {/* Contenu centré */}
-      <main className="p-4">
-        <div>
-          <h1 className="text-3xl font-bold mb-6 text-white drop-shadow-lg">
-            Coucou le plus beau des hommes ! 🎉
-          </h1>
-          <Link href="/birthday-game">
-            <button className="px-6 py-3 bg-blue-500 text-white rounded-lg shadow-lg text-lg">
-              🎂 Je t&apos;ai fait un petit jeu d&apos;anniversaire ! 🥺
-            </button>
-          </Link>
-        </div>
-      </main>
+    <div className="relative h-screen w-full flex flex-col items-center justify-center text-center">
+      {/* Conteneur pour le GIF */}
+      <div className="absolute inset-0 z-0">
+        {/* ... votre fond GIF ... */}
+      </div>
+      {/* Texte principal */}
+      <div className="relative z-10 top-10 text-3xl font-bold text-white">
+        Coucou le plus bel homme sur 🌍
+        <br />
+        🎂 Je t&apos;ai fait un petit jeu d&apos;anniversaire ! 👾
+      </div>
+      {/* Bouton en dessous */}
+      <div className="relative z-10 mt-20">
+        <Link href="/birthday-game">
+          <button className="px-6 py-3 bg-blue-500 text-white rounded-lg shadow-lg text-lg">
+            Tu le tentes ? 🥺
+          </button>
+        </Link>
+      </div>
     </div>
   );
-};
-
-export default Home;
+}

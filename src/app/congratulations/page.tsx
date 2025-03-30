@@ -18,21 +18,21 @@ export default function Congratulations() {
 
         {/* GIF d'anniversaire */}
         <Image 
-          src="/birthday-celebration.gif" // Ensure this path is correct and points to the actual GIF file
+          src="/birthday-celebration.gif" 
           alt="GIF de joyeux anniversaire" 
           className="rounded-lg shadow-lg"
-          width={500} 
-          height={500} 
+          width={300} 
+          height={300} 
         />
-      </div>
 
-      <button 
-        onClick={() => window.location.href = "/birthday-game"}
-        className="px-8 py-3 bg-pink-500 hover:bg-pink-600 text-white rounded-lg 
-                  text-lg font-semibold transition-colors shadow-lg"
-      >
-        Rejouer
-      </button>
+        <button 
+          onClick={() => window.location.href = "/birthday-game"}
+          className="mt-6 px-8 py-3 bg-pink-500 hover:bg-pink-600 text-white rounded-lg 
+                    text-lg font-semibold transition-colors shadow-lg"
+        >
+          Rejouer
+        </button>
+      </div>
     </div>
   );
 }
